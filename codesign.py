@@ -32,7 +32,7 @@ def strtobool(val):
         raise ValueError("invalid truth value %r" % (val,))
 
 
-def get_config(args, default_config=None, filename="pycodesign.ini"):
+def get_config(args, default_config=None, filename="codesign.ini"):
     file = args.config
     config = configparser.ConfigParser()
 
@@ -67,7 +67,7 @@ def get_args():
             pass
 
     parser = argparse.ArgumentParser(
-        description="PyCodeSign -- Code Signing and Notarization Assistant"
+        description="codesign -- Code Signing and Notarization Assistant"
     )
 
     parser.add_argument("-v", "--verbose", action="count", default=1)
@@ -82,7 +82,7 @@ def get_args():
         dest="new_config",
         action="store_true",
         default=False,
-        help='create a new sample configuration with name "pycodesign.ini" in current directory',
+        help='create a new sample configuration with name "codesign.ini" in current directory',
     )
 
     parser.add_argument(
@@ -91,7 +91,7 @@ def get_args():
         type=str,
         default=None,
         help="configuration file to use when codesigning",
-        metavar="<PYCODESIGN_CONFIG.INI>",
+        metavar="CODESIGN_CONFIG.INI",
     )
 
     parser.add_argument(

@@ -74,7 +74,8 @@ For help creating certificates and app-specific passwords see: [Signing_and_Nota
 Use `security find-identity -p basic -v` to view Certificate strings
 
 Use `curl -LJO https://raw.githubusercontent.com/txoof/codesign/main/entitlements.plist` to quickly download the a sample `entitlements.plist`
-```
+
+```ini
 # All [sections] and values are required unless otherwise noted
 # whitespace and comments are ignored
 
